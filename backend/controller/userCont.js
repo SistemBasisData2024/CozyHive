@@ -18,6 +18,7 @@ signUp = async(req, res) =>{
 
 login = async(req, res) =>{
     const{email, password} = req.body;
+    //console.log(req.body);
     try{
         const result = await pool.query(
             `SELECT * FROM user_profile WHERE email = $1 AND password = $2`,
