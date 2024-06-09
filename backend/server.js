@@ -12,7 +12,6 @@ app.use(cors());
 connector.connectDB();
 app.use(route);
 
-
 app.listen(PORT, () => {
     console.info("Server is running on port", PORT);
 });

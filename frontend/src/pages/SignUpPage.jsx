@@ -38,80 +38,82 @@ const SignUpPage = () => {
 
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center bg-blue-200">
-        <div className="max-w-md w-full bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-3xl text-white font-bold text-center mb-8">
-            Create a New Account
-          </h2>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-indigo-100">
+      <div className="text-4xl text-indigo-800 font-bold text-center mb-8">
+            Let's make an account!
+          </div>
+        <div className="max-w-md w-full bg-indigo-500 p-8 rounded-lg">
+          
           <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-              <label htmlFor="username" className="block text-gray-300">
+              <label htmlFor="username" className="block text-white">
                 Username
               </label>
               <input
                 type="text"
                 id="username"
                 name="username"
-                className="block w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-300 focus:outline-none focus:border-blue-500"
+                className="block w-full bg-indigo-200 border border-indigo-400 rounded-lg py-2 px-4 text-black focus:outline-none focus:border-indigo-500"
                 value={formData.username}
                 onChange={handleChange}
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-300">
+              <label htmlFor="email" className="block text-white">
                 Email
               </label>
               <input
                 type="text"
                 id="email"
                 name="email"
-                className="block w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-300 focus:outline-none focus:border-blue-500"
+                className="block w-full bg-indigo-200 border border-indigo-400 rounded-lg py-2 px-4 text-black focus:outline-none focus:border-indigo-500"
                 value={formData.email}
                 onChange={handleChange}
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-gray-300">
+              <label htmlFor="password" className="block text-white">
                 Password
               </label>
               <input
                 type="password"
                 id="password"
                 name="password"
-                className="block w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 text-gray-300 focus:outline-none focus:border-blue-500"
+                className="block w-full bg-indigo-200 border border-indigo-400 rounded-lg py-2 px-4 text-black focus:outline-none focus:border-indigo-500"
                 value={formData.password}
                 onChange={handleChange}
               />
             </div>
             <div>
-              <label htmlFor="Telepon" className="block text-gray-300">
+              <label htmlFor="Telepon" className="block text-white">
                 Telepon
               </label>
               <input
                 type="text"
                 id="telepon"
                 name="telepon"
-                className="block w-full bg-gray-700 border border-gray-600 rounded-lg py-2 px-4 mb-5 text-gray-300 focus:outline-none focus:border-blue-500"
+                className="block w-full bg-indigo-200 border border-indigo-400 rounded-lg py-2 px-4 text-black focus:outline-none focus:border-indigo-500"
                 value={formData.telepon}
                 onChange={handleChange}
               />
             </div>
+            <div className="mt-4 flex justify-center">
             <button
               type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-            >
+              className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
               Sign Up
             </button>
+            </div>
           </form>
           {message && (
             <div className="mt-4 text-gray-300 text-center">
               <p>{message}</p>
             </div>
           )}
-          <div className="mt-4 text-gray-300 text-center">
+          <div className="mt-4 text-white text-center">
             <p>
               Already have an account?{" "}
-              <a href="/login" className="text-blue-500">
+              <a href="/login" className="font-bold text-indigo-900">
                 Login
               </a>
             </p>
